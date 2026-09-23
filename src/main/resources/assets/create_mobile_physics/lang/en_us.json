@@ -1,0 +1,7 @@
+{
+  "itemGroup.create_mobile_physics": "Create Mobile Physics",
+  "block.create_mobile_physics.balloon": "Hot Air Balloon",
+  "block.create_mobile_physics.thruster": "Simple Thruster",
+  "item.create_mobile_physics.balloon": "Hot Air Balloon",
+  "item.create_mobile_physics.thruster": "Simple Thruster"
+}
