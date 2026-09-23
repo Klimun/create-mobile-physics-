@@ -1,9 +1,12 @@
 package com.mojophysics.create_mobile_physics;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -12,19 +15,20 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.phys.Vec3;
 
-/**
- * Simple thruster. When powered by redstone, applies force in the facing direction.
- * Very cheap calculation for mobile devices.
- */
 public class ThrusterBlock extends DirectionalBlock {
+
+    public static final MapCodec<ThrusterBlock> CODEC = simpleCodec(ThrusterBlock::new);
 
     public ThrusterBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends DirectionalBlock> codec() {
+        return CODEC;
     }
 
     @Override
@@ -68,7 +72,6 @@ public class ThrusterBlock extends DirectionalBlock {
         for (Entity entity : level.getEntities(null, box)) {
             if (entity instanceof Player || entity.getType().getCategory().isFriendly()) {
                 Vec3 motion = entity.getDeltaMovement().add(dir);
-                // soft cap
                 double max = Config.MAX_HORIZONTAL_SPEED.get();
                 double hx = Math.max(-max, Math.min(max, motion.x));
                 double hz = Math.max(-max, Math.min(max, motion.z));
@@ -77,4 +80,4 @@ public class ThrusterBlock extends DirectionalBlock {
             }
         }
     }
-}
+                }
