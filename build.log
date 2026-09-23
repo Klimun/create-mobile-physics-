@@ -1,0 +1,90 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Reusing configuration cache.
+> Task :generateModMetadata UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :jarJar NO-SOURCE
+> Task :processTestResources NO-SOURCE
+
+> Task :createMinecraftArtifacts
+Loaded 131 artifacts from /home/workdir/artifacts/create_mobile_physics/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties
+[1m*** Started working on [4mdownloadJson[23;0m[23;0m
+ [1m[92m✓[23;0m Completed [4mdownloadJson[23;0m in 0.49s
+[1m*** Started working on [4mdownloadServer[23;0m[23;0m
+[1m*** Started working on [4mdownloadClientMappings[23;0m[23;0m
+[1m*** Started working on [4mdownloadClient[23;0m[23;0m
+ [1m[92m✓[23;0m Completed [4mdownloadServer[23;0m in 0.49s
+[1m*** Started working on [4mextractServer[23;0m[23;0m
+ [1m[92m♻[23;0m Used cache of [4mextractServer[23;0m in 0.01s
+[1m*** Started working on [4mstripServer[23;0m[23;0m
+ [1m[92m♻[23;0m Used cache of [4mstripServer[23;0m in 0.00s
+ [1m[92m✓[23;0m Completed [4mdownloadClientMappings[23;0m in 0.79s
+[1m*** Started working on [4mmergeMappings[23;0m[23;0m
+ [1m[92m♻[23;0m Used cache of [4mmergeMappings[23;0m in 0.00s
+ [1m[92m✓[23;0m Completed [4mdownloadClient[23;0m in 1.11s
+[1m*** Started working on [4mstripClient[23;0m[23;0m
+ [1m[92m♻[23;0m Used cache of [4mstripClient[23;0m in 0.00s
+[1m*** Started working on [4mmerge[23;0m[23;0m
+ [1m[92m♻[23;0m Used cache of [4mmerge[23;0m in 0.00s
+[1m*** Started working on [4mrename[23;0m[23;0m
+ ↳ Running external tool net.neoforged:AutoRenamingTool:2.0.3:all
+Last lines of /home/workdir/artifacts/create_mobile_physics/build/tmp/neoformruntime/20260923-050105_rename/console_output.txt:
+------------------------------------------------------------
+yfd-3.3.3.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.3/d8d58daa0c3e5fd906fee96f5fddbcbc07cc308b/lwjgl-tinyfd-3.3.3-natives-linux.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.3/29589b5f87ed335a6c7e7ee6a5775f81f97ecb84/lwjgl-3.3.3.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.3/1713758e3660ba66e1e954396fd18126038b33c0/lwjgl-3.3.3-natives-linux.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/org.lz4/lz4-java/1.8.0/4b986a99445e49ea5fbf5d149c4b63f6ed6c6780/lz4-java-1.8.0.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.9/7cf2726fdcfbc8610f9a71fb3ed639871f315340/slf4j-api-2.0.9.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/ca.weblite/java-objc-bridge/1.1/1227f9e0666314f9de41477e3ec277e542ed7f7b/java-objc-bridge-1.1.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/net.neoforged/mergetool/2.0.3/1275202cbbb248f49345cf6787ce299afd9a02fb/mergetool-2.0.3-api.jar
+lib: /root/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/24.1.0/7af6a669488450c4a07c2c3254e2151df42d7d04/annotations-24.1.0.jar
+log: null
+input: /root/.gradle/caches/neoformruntime/intermediate_results/merge_8503fda02cff83cf4896f8b254e4fde2d657ec61_output.jar
+output: /home/workdir/artifacts/create_mobile_physics/build/tmp/neoformruntime/20260923-050105_rename/./output.jar
+threads: 2
+Names: /root/.gradle/caches/neoformruntime/intermediate_results/mergeMappings_2100ae7c755bb34ac4545c9eeec4a90c42ad48c4_output.tsrg(reversed: false)
+Fix Annotations: true
+Unfinal Parameters: true
+Fix Records: true
+Fix Identifiers: ALL
+Fix SourceFile: JAVA
+Fix Line Numbers: false
+Strip codesigning signatures: false
+Adding Libraries to Inheritance
+Reading Input: /root/.gradle/caches/neoformruntime/intermediate_results/merge_8503fda02cff83cf4896f8b254e4fde2d657ec61_output.jar
+Adding input to inheritance map
+Processing entries
+
+------------------------------------------------------------
+Total runtime: 75.62s
+
+net.neoforged.neoform.runtime.graph.NodeExecutionException: Node action for rename failed
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:613)
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.lambda$getWaitCondition$5(NeoFormEngine.java:559)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPerTaskExecutor$TaskRunner.run(ThreadPerTaskExecutor.java:314)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+Caused by: java.lang.RuntimeException: Failed to execute tool
+	at net.neoforged.neoform.runtime.actions.ExternalJavaToolAction.run(ExternalJavaToolAction.java:202)
+	at net.neoforged.neoform.runtime.engine.NeoFormEngine.runNode(NeoFormEngine.java:602)
+	... 4 more
+
+> Task :createMinecraftArtifacts FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':createMinecraftArtifacts'.
+> Process 'command '/usr/lib/jvm/java-21-openjdk-amd64/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 27s
+3 actionable tasks: 1 executed, 2 up-to-date
+Configuration cache entry reused.
