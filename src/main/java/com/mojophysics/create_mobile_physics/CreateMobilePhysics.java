@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -62,12 +63,16 @@ public class CreateMobilePhysics {
             () -> new WheelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(2.0f).requiresCorrectToolForDrops()));
     public static final DeferredItem<BlockItem> WHEEL_ITEM = ITEMS.registerSimpleBlockItem("wheel", WHEEL_BLOCK);
 
+    public static final DeferredItem<Item> PHYSICS_GLUE = ITEMS.register("physics_glue",
+            () -> new PhysicsGlueItem(new Item.Properties().stacksTo(1)));
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("main",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.create_mobile_physics"))
                     .withTabsBefore(CreativeModeTabs.COMBAT)
                     .icon(() -> BALLOON_ITEM.get().getDefaultInstance())
                     .displayItems((p, out) -> {
+                        out.accept(PHYSICS_GLUE.get());
                         out.accept(BALLOON_ITEM.get());
                         out.accept(WING_ITEM.get());
                         out.accept(HEATER_ITEM.get());
@@ -85,15 +90,17 @@ public class CreateMobilePhysics {
         NeoForge.EVENT_BUS.register(this);
         bus.addListener(this::addCreative);
         container.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-        LOGGER.info("Create Mobile Physics 0.3 - Create zorunlu, mobil fizik");
+        LOGGER.info("Create Mobile Physics 0.4 - Fizik tutkali");
     }
 
     private void commonSetup(FMLCommonSetupEvent e) {
-        LOGGER.info("CMP 0.3 | blocksPerBalloon={} wingsPerMotor={}",
-                Config.BLOCKS_PER_BALLOON.get(), Config.WINGS_PER_MOTOR.get());
+        LOGGER.info("CMP 0.4 glue | maxBlocks={}", Config.MAX_STRUCTURE_BLOCKS.get());
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent e) {
+        if (e.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            e.accept(PHYSICS_GLUE);
+        }
         if (e.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             e.accept(BALLOON_ITEM);
             e.accept(WING_ITEM);
@@ -107,6 +114,6 @@ public class CreateMobilePhysics {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent e) {
-        LOGGER.info("Create Mobile Physics hazir (Create gerekli)");
+        LOGGER.info("Create Mobile Physics 0.4 hazir");
     }
 }
