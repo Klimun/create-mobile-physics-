@@ -13,5 +13,8 @@
   "item.create_mobile_physics.wing_motor": "Wing Motor",
   "item.create_mobile_physics.thruster": "Jet Motor",
   "item.create_mobile_physics.track": "Tank Track",
-  "item.create_mobile_physics.wheel": "Wheel"
+  "item.create_mobile_physics.wheel": "Wheel",
+  "item.create_mobile_physics.physics_glue": "Physics Glue",
+  "message.create_mobile_physics.glued": "Vehicle bound: %s blocks, %s balloons, %s wings",
+  "message.create_mobile_physics.unglued": "Vehicle unbound"
 }
