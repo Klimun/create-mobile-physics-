@@ -13,5 +13,8 @@
   "item.create_mobile_physics.wing_motor": "Kanat Motoru",
   "item.create_mobile_physics.thruster": "Jet Motoru",
   "item.create_mobile_physics.track": "Tank Paleti",
-  "item.create_mobile_physics.wheel": "Tekerlek"
+  "item.create_mobile_physics.wheel": "Tekerlek",
+  "item.create_mobile_physics.physics_glue": "Fizik Tutkali",
+  "message.create_mobile_physics.glued": "Arac baglandi: %s blok, %s balon, %s kanat",
+  "message.create_mobile_physics.unglued": "Arac baglantisi cozuldu"
 }
