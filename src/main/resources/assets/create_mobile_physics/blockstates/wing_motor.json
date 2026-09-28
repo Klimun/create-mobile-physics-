@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "create_mobile_physics:block/wing_motor", "y": 180 },
+    "facing=south": { "model": "create_mobile_physics:block/wing_motor" },
+    "facing=west":  { "model": "create_mobile_physics:block/wing_motor", "y": 90 },
+    "facing=east":  { "model": "create_mobile_physics:block/wing_motor", "y": 270 },
+    "facing=up":    { "model": "create_mobile_physics:block/wing_motor", "x": 270 },
+    "facing=down":  { "model": "create_mobile_physics:block/wing_motor", "x": 90 }
+  }
+}
