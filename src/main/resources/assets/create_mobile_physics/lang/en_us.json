@@ -1,7 +1,17 @@
 {
   "itemGroup.create_mobile_physics": "Create Mobile Physics",
-  "block.create_mobile_physics.balloon": "Hot Air Balloon",
-  "block.create_mobile_physics.thruster": "Simple Thruster",
-  "item.create_mobile_physics.balloon": "Hot Air Balloon",
-  "item.create_mobile_physics.thruster": "Simple Thruster"
+  "block.create_mobile_physics.balloon": "Balloon (Decorative)",
+  "block.create_mobile_physics.wing": "Wing (Decorative)",
+  "block.create_mobile_physics.heater": "Hot Air Blower",
+  "block.create_mobile_physics.wing_motor": "Wing Motor",
+  "block.create_mobile_physics.thruster": "Jet Motor",
+  "block.create_mobile_physics.track": "Tank Track",
+  "block.create_mobile_physics.wheel": "Wheel",
+  "item.create_mobile_physics.balloon": "Balloon (Decorative)",
+  "item.create_mobile_physics.wing": "Wing (Decorative)",
+  "item.create_mobile_physics.heater": "Hot Air Blower",
+  "item.create_mobile_physics.wing_motor": "Wing Motor",
+  "item.create_mobile_physics.thruster": "Jet Motor",
+  "item.create_mobile_physics.track": "Tank Track",
+  "item.create_mobile_physics.wheel": "Wheel"
 }
