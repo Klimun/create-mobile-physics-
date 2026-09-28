@@ -6,6 +6,10 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class Config {
     private static final ModConfigSpec.Builder B = new ModConfigSpec.Builder();
 
+    public static final ModConfigSpec.IntValue MAX_STRUCTURE_BLOCKS = B
+            .comment("Fizik tutkali max blok (2GB guvenlik)")
+            .defineInRange("maxStructureBlocks", 48, 8, 128);
+
     public static final ModConfigSpec.IntValue BLOCKS_PER_BALLOON = B
             .comment("Kac blok icin 1 balon gerekir (dekoratif sayac)")
             .defineInRange("blocksPerBalloon", 10, 5, 50);
