@@ -1,0 +1,17 @@
+{
+  "itemGroup.create_mobile_physics": "Create Mobil Fizik",
+  "block.create_mobile_physics.balloon": "Balon (Dekoratif)",
+  "block.create_mobile_physics.wing": "Kanat (Dekoratif)",
+  "block.create_mobile_physics.heater": "Sicak Hava Ufleyicisi",
+  "block.create_mobile_physics.wing_motor": "Kanat Motoru",
+  "block.create_mobile_physics.thruster": "Jet Motoru",
+  "block.create_mobile_physics.track": "Tank Paleti",
+  "block.create_mobile_physics.wheel": "Tekerlek",
+  "item.create_mobile_physics.balloon": "Balon (Dekoratif)",
+  "item.create_mobile_physics.wing": "Kanat (Dekoratif)",
+  "item.create_mobile_physics.heater": "Sicak Hava Ufleyicisi",
+  "item.create_mobile_physics.wing_motor": "Kanat Motoru",
+  "item.create_mobile_physics.thruster": "Jet Motoru",
+  "item.create_mobile_physics.track": "Tank Paleti",
+  "item.create_mobile_physics.wheel": "Tekerlek"
+}
